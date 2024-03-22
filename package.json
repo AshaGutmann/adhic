@@ -1,0 +1,58 @@
+{
+  "name": "adhic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "@mongodb-js/zstd",
+    "package": {
+      "name": "@mongodb-js/zstd"
+    },
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "aarch64-unknown-linux-gnu",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc",
+        "armv7-unknown-linux-gnueabihf",
+        "x86_64-unknown-linux-musl",
+        "x86_64-unknown-freebsd",
+        "i686-pc-windows-msvc",
+        "armv7-linux-androideabi"
+      ]
+    }
+  },
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.4.4",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.1",
+    "standard-version": "^9.3.2"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "release": "standard-version -i HISTORY.md",
+    "test": "mocha --recursive test/",
+    "version": "napi version"
+  },
+  "author": "BradlyOrn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshaGutmann/adhic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AshaGutmann/adhic.git/issues"
+  }
+}
